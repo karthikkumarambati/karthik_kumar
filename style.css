@@ -3,10 +3,6 @@
 \*-----------------------------------*/
 
 
-/**
- * copyright 2022 @codewithsadee
- */
-
 
 
 
@@ -1172,6 +1168,9 @@ main {
   grid-template-columns: 1fr;
   gap: 25px;
   margin-bottom: 25px;
+}
+.form {
+    display: inline!important;
 }
 
 .form-input {
