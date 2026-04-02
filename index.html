@@ -9,13 +9,23 @@
    <link rel="shortcut icon" href="images\k-modified.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- background animation -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+   <!-- end -->
   <script src="https://kit.fontawesome.com/f707bee2c9.js" crossorigin="anonymous"></script>
+  <!--  -->
+   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <!-- Mail Notification -->
+
+<!--  -->
   
 </head>
 
 <body>
+
+  <div id="bg-canvas"></div>
   <main>
 
     <!--
@@ -207,85 +217,6 @@
         </section>
 
 
-        <!--
-          - service
-        -->
-
-        <!-- <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
-
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
-
-                <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section> -->
-
 
         <!--
           - testimonials
@@ -407,58 +338,6 @@
           </section>
 
         </div>
-
-
-        <!--
-          - clients
-        -->
-
-<!-- <section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section> -->
-
       </article>
 
 
@@ -840,12 +719,12 @@ allowed cross-platform accessibility to the website
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Business/Corporate Websites</button>
+              <button data-filter-btn>Business/Corporate-Websites</button>
             </li>
 
             
             <li class="filter-item">
-              <button data-filter-btn>ECommerce Websites</button>
+              <button data-filter-btn>Ecommerce-Websites</button>
             </li>
 
           </ul>
@@ -854,7 +733,7 @@ allowed cross-platform accessibility to the website
 
             <button class="filter-select" data-select>
 
-              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-value" data-select-value>Select category</div>
 
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
@@ -869,12 +748,12 @@ allowed cross-platform accessibility to the website
               </li>
 
               <li class="select-item">
-                <button data-select-item>Business/Corporate Websites</button>
+                <button data-select-item>Business/Corporate-Websites</button>
               </li>
 
               
               <li class="select-item">
-                <button data-select-item>ECommerce Websites</button>
+                <button data-select-item>Ecommerce-Websites</button>
               </li>
 
             </ul>
@@ -882,7 +761,7 @@ allowed cross-platform accessibility to the website
           </div>
 
           <ul class="project-list">
-            <li class="project-item  active" data-filter-item data-category="ECommerce Websites">
+            <li class="project-item  active" data-filter-item data-category="ecommerce-Websites">
               <a href="https://ritewaymed.com/">
 
                 <figure class="project-img">
@@ -900,7 +779,7 @@ allowed cross-platform accessibility to the website
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="ECommerce Websites">
+            <li class="project-item  active" data-filter-item data-category="ecommerce-websites">
               <a href="https://drogo.shop/">
 
                 <figure class="project-img">
@@ -918,7 +797,7 @@ allowed cross-platform accessibility to the website
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="Business/Corporate Websites">
+            <li class="project-item  active" data-filter-item data-category="business/corporate-websites">
               <a href="https://nexply.shop/">
 
                 <figure class="project-img">
@@ -936,7 +815,7 @@ allowed cross-platform accessibility to the website
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="Business/Corporate Websites">
+            <li class="project-item  active" data-filter-item data-category="business/corporate-websites">
               <a href="https://mastersvisa.com/">
 
                 <figure class="project-img">
@@ -954,7 +833,7 @@ allowed cross-platform accessibility to the website
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="ECommerce Websites">
+            <li class="project-item  active" data-filter-item data-category="ecommerce-websites">
               <a href="#">
 
                 <figure class="project-img">
@@ -967,12 +846,12 @@ allowed cross-platform accessibility to the website
 
                 <h3 class="project-title">Restuarent</h3>
 
-                <p class="project-category">ECommerce Websites</p>
+                <p class="project-category">Ecommerce Websites</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="Business/Corporate Websites">
+            <li class="project-item  active" data-filter-item data-category="business/corporate-websites">
               <a href="#">
 
                 <figure class="project-img">
@@ -990,7 +869,7 @@ allowed cross-platform accessibility to the website
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="Business/Corporate Websites">
+            <li class="project-item  active" data-filter-item data-category="business/corporate-websites">
               <a href="https://dataartisans.net/">
 
                 <figure class="project-img">
@@ -1008,7 +887,7 @@ allowed cross-platform accessibility to the website
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="Business/Corporate Websites">
+            <li class="project-item  active" data-filter-item data-category="business/corporate-websites">
               <a href="https://innovicsolutions.com/">
 
                 <figure class="project-img">
@@ -1026,7 +905,7 @@ allowed cross-platform accessibility to the website
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="Business/Corporate Websites">
+            <li class="project-item  active" data-filter-item data-category="business/corporate-websites">
               <a href="#">
 
                 <figure class="project-img">
@@ -1046,7 +925,7 @@ allowed cross-platform accessibility to the website
 
            
 
-            <li class="project-item  active" data-filter-item data-category="ECommerce Websites">
+            <li class="project-item  active" data-filter-item data-category="ecommerce-websites">
               <a href="https://showteacher.in/">
 
                 <figure class="project-img">
@@ -1063,7 +942,7 @@ allowed cross-platform accessibility to the website
 
               </a>
             </li>
-            <li class="project-item  active" data-filter-item data-category="Business/Corporate Websites">
+            <li class="project-item  active" data-filter-item data-category="business/corporate-websites">
               <a href="https://gentechnologies.net/">
 
                 <figure class="project-img">
@@ -1080,7 +959,7 @@ allowed cross-platform accessibility to the website
 
               </a>
             </li>
-            <li class="project-item  active" data-filter-item data-category="Business/Corporate Websites">
+            <li class="project-item  active" data-filter-item data-category="business/corporate-websites">
               <a href="https://datavgen.com/">
 
                 <figure class="project-img">
@@ -1097,7 +976,7 @@ allowed cross-platform accessibility to the website
 
               </a>
             </li>
-            <li class="project-item  active" data-filter-item data-category="Business/Corporate Websites">
+            <li class="project-item  active" data-filter-item data-category="business/corporate-websites">
               <a href="https://aquariusltd.net/">
 
                 <figure class="project-img">
@@ -1114,7 +993,7 @@ allowed cross-platform accessibility to the website
 
               </a>
             </li>
-            <li class="project-item  active" data-filter-item data-category="Business/Corporate Websites">
+            <li class="project-item  active" data-filter-item data-category="business/corporate-websites">
               <a href="https://scienceforall.in/">
 
                 <figure class="project-img">
@@ -1132,7 +1011,7 @@ allowed cross-platform accessibility to the website
               </a>
             </li>
 <!------Mastervisa.co.in----->
-<li class="project-item  active" data-filter-item data-category="Business/Corporate Websites">
+<li class="project-item  active" data-filter-item data-category="business/corporate-websites">
               <a href="https://mastervisa.co.in/">
 
                 <figure class="project-img">
@@ -1150,7 +1029,7 @@ allowed cross-platform accessibility to the website
               </a>
             </li>
 <!---Nexplysolutions------>
-<li class="project-item  active" data-filter-item data-category="Business/Corporate Websites">
+<li class="project-item  active" data-filter-item data-category="business/corporate-websites">
               <a href="https://nexplysolutions.com/">
 
                 <figure class="project-img">
@@ -1173,205 +1052,6 @@ allowed cross-platform accessibility to the website
         </section>
 
       </article>
-
-
-
-
-
-     <!-----------
-        -----------------------------------------------
-        --------------------------------------------------
-        ----------------- #Blog---------------------
-        -------------------------------------------------
-        -------------------------------------------------
-      ------------>
-      <!-- <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article> -->
-
-
-
-
 
       <!-----------
         -----------------------------------------------
@@ -1399,7 +1079,7 @@ allowed cross-platform accessibility to the website
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <form action="#" class="form" id="contact-form" data-form>
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
