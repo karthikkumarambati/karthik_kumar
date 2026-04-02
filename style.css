@@ -137,17 +137,11 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-/* 
-body { background: var(--smoky-black); }
-*/
-body {
-            background-color: var(--bg-dark);
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            overflow: hidden; /* Canvas handles scroll vibes */
-        }
+body { 
+	background: var(--smoky-black); 
+}
+
 #bg-canvas {
-            position: fixed;
             top: 0;
             left: 0;
             z-index: -1;
