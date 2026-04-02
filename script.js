@@ -159,33 +159,3 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 
-//--- 1. Three.js 3D Background (Animated Stars) ---
-const canvas = document.querySelector('#bg-canvas');
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
-
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
-
-        const starGeometry = new THREE.BufferGeometry();
-        const starCount = 5000;
-        const posArray = new Float32Array(starCount * 3);
-
-        for(let i=0; i < starCount * 3; i++) {
-            posArray[i] = (Math.random() - 0.5) * 8;
-        }
-        starGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-        const starMaterial = new THREE.PointsMaterial({ size: 0.005, color: 0xffdb70 });
-        const starMesh = new THREE.Points(starGeometry, starMaterial);
-        scene.add(starMesh);
-
-        camera.position.z = 2;
-
-        function animate() {
-            requestAnimationFrame(animate);
-            starMesh.rotation.y += 0.001;
-            starMesh.rotation.x += 0.0005;
-            renderer.render(scene, camera);
-        }
-        animate();
