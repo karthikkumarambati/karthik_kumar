@@ -2,6 +2,45 @@
   #style.css
 \*-----------------------------------*/
 
+/* 🌌 Background Canvas */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: black;
+}
+
+/* ✨ Smooth Animations */
+article {
+  animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✨ Hover Glow Effect */
+.project-item:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+/* ✨ Sidebar Glow */
+.sidebar:hover {
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+  transition: 0.4s;
+}
 
 
 
@@ -151,7 +190,7 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+/* body { background: var(--smoky-black); } */
 
 
 
@@ -163,7 +202,7 @@ body { background: var(--smoky-black); }
 
 .sidebar,
 article {
-  background: var(--eerie-black-2);
+  background: #111111ad;
   border: 1px solid var(--jet);
   border-radius: 20px;
   padding: 15px;
@@ -1039,6 +1078,11 @@ main {
   height: 100%;
   object-fit: cover;
   transition: var(--transition-1);
+}
+
+.project-item:hover{
+    padding: 18px;
+    border-radius: 15px;
 }
 
 .project-item > a:hover img { transform: scale(1.1); }
