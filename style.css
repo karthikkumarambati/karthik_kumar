@@ -926,8 +926,11 @@ main {
 }
 .my_cv a:hover{
 	padding: 10px 10px;
-	font-size: 18px;
+	font-size: 14px;
 	box-shadow: var(--shadow-2);
+}
+.my_cv a:nth-child(2){
+	float: right;
 }
 /* .my_cl{
   margin-top: 20px;
