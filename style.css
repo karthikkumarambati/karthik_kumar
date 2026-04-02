@@ -141,12 +141,6 @@ body {
 	background: var(--smoky-black); 
 }
 
-#bg-canvas {
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-
 
 
 
