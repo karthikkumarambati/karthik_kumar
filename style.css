@@ -2,7 +2,22 @@
   #style.css
 \*-----------------------------------*/
 
+
+
+
+
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
 :root {
+
+  /**
+   * colors
+   */
+
+  /* gradient */
 
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
@@ -96,7 +111,6 @@
 
 
 
-
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
@@ -137,9 +151,8 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { 
-	background: var(--smoky-black); 
-}
+body { background: var(--smoky-black); }
+
 
 
 
