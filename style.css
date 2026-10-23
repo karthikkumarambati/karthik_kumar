@@ -4217,7 +4217,7 @@ article {
 
   /* Firefox */
   .sidebar {
-    scrollbar-width: thin;
+    scrollbar-width: none;
     scrollbar-color: var(--jet) transparent;
   }
 
@@ -4311,3 +4311,69 @@ article {
   }
 
 }
+
+/* ====================Bike Ride Button=========== */
+.ride-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:9px 18px 9px 12px;border-radius:999px;
+  background:linear-gradient(90deg,#19f0d2,#27b7ff);
+  color:#02121a;font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap;
+  box-shadow:0 0 0 0 rgba(25,240,210,.6);
+  animation:ridePulse 2s infinite;transition:transform .2s;
+}
+.ride-btn:hover{transform:translateY(-2px)}
+.ride-btn svg{width:42px;height:28px;overflow:visible}
+.ride-bike{animation:rideBob .5s ease-in-out infinite}
+.ride-wheel{transform-box:fill-box;transform-origin:center;animation:rideSpin .6s linear infinite}
+.ride-lines{animation:rideDash .5s linear infinite}
+
+.ride-rider{position:fixed;bottom:40px;left:-160px;width:130px;display:none;z-index:9999;
+  filter:drop-shadow(0 0 14px #19f0d2)}
+.ride-rider.go{display:block;animation:rideCross 1.4s cubic-bezier(.5,0,.8,.6) forwards}
+.ride-fade{position:fixed;inset:0;background:#000;opacity:0;pointer-events:none;
+  transition:opacity .5s;z-index:10000}
+.ride-fade.on{opacity:1}
+
+@keyframes rideSpin{to{transform:rotate(360deg)}}
+@keyframes rideBob{50%{transform:translateY(-1.5px)}}
+@keyframes rideDash{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(-8px)}}
+@keyframes ridePulse{70%{box-shadow:0 0 0 12px rgba(25,240,210,0)}100%{box-shadow:0 0 0 0 rgba(25,240,210,0)}}
+@keyframes rideCross{to{left:110vw}}
+
+@media (prefers-reduced-motion:reduce){
+  .ride-btn,.ride-bike,.ride-wheel,.ride-lines{animation:none}
+}
+
+.ride-short{display:none}
+ 
+/* Mobile + small tablets: keep everything on ONE row inside the bottom nav */
+@media (max-width: 580px) {
+  .navbar-list{
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2px;
+    padding: 0 8px;
+  }
+  .navbar-item{ flex: 0 0 auto; }
+ 
+  .ride-long{ display: none; }
+  .ride-short{ display: inline; }
+ 
+  .ride-btn{
+    gap: 5px;
+    padding: 5px 12px 5px 8px;
+    font-size: 11px;
+    line-height: 1;
+    animation-duration: 2.4s;
+  }
+  .ride-btn svg{ width: 28px; height: 19px; }
+}
+ 
+/* Very small phones (≤ 360px): icon only */
+@media (max-width: 360px) {
+  .ride-short{ display: none; }
+  .ride-btn{ padding: 6px 9px; }
+}
+
+/* ====================================================== */
