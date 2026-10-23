@@ -1950,3 +1950,21 @@
   });
 
 })();
+
+// ================== Bike Ride Button ===========================
+(function () {
+  var btn = document.getElementById("rideBtn");
+  var rider = document.getElementById("rideRider");
+  var fade = document.getElementById("rideFade");
+  if (!btn) return;
+
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    var url = btn.getAttribute("href");
+    rider.classList.add("go");
+    setTimeout(function () { fade.classList.add("on"); }, 900);
+    setTimeout(function () { window.location.href = url; }, 1500);
+  });
+})();
+
+// ====================== End ========================================
